@@ -1,7 +1,9 @@
 from flask import Flask, request, abort
 from model import findKeyWords
+from dotenv import load_dotenv
 import json
 app = Flask(__name__) 
+load_dotenv()
 
 
 @app.route('/model', methods=['POST'])
