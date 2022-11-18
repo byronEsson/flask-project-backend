@@ -1,1 +1,1 @@
-web: gunicorn modelBackend:app
+web: gunicorn hello:app
