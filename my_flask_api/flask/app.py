@@ -8,7 +8,7 @@ app = Flask(__name__)
 def model():
     try:
         words = request.json  
-        return json.dumps(findKeyWords(words['positive'], words['negative'] ))
+        return json.dumps({'keywords': findKeyWords(words['positive'], words['negative'] )})
     except:
         abort(400)
 
