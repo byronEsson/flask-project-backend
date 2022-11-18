@@ -23,3 +23,6 @@ def not_found():
 @app.errorhandler(400)
 def handle_400(e):
     return 'Request object not formatted correctly', 400
+
+if __name__ == '__main__':
+    app.run(threaded=True, port=5000)
