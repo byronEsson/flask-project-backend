@@ -1,7 +1,7 @@
 from flask import Flask, request, abort
 from model import findKeyWords
 import json
-app = Flask('my_favourite_api') 
+app = Flask(__name__) 
 
 
 @app.route('/model', methods=['POST'])
