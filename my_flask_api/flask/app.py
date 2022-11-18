@@ -12,6 +12,10 @@ def model():
     except:
         abort(400)
 
+@app.route('/')
+def home():
+    return {'greeting': 'hello'}
+
 @app.route("/*")
 def not_found():
     abort(404)
